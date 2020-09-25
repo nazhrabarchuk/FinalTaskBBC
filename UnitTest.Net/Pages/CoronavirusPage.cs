@@ -68,12 +68,12 @@ namespace UnitTest.Net.Pages
         }
 
       
-        public void LogInKeys(string userStory, string userName, string userEmail, string userNumber, string userLocation)
+        public void LogInKeys(string userStory, string userName, string userEmail, int userNumber, string userLocation)
         {
             UserStoryTexarea.SendKeys(userStory);
             UserNameInput.SendKeys(userName);
             UserEmailInput.SendKeys(userEmail);
-            UserNumberInput.SendKeys(userNumber);
+            UserNumberInput.SendKeys(userNumber.ToString());
             UserLocationInput.SendKeys(userLocation);
         }
 

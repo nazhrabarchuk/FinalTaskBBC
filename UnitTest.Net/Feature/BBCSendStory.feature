@@ -12,7 +12,7 @@
 Scenario: Send the coronovirus story
 	 When fill in the information on the bottom
 	 | Story       | Name | EmailAddress   | ContactNumber | Location                                |
-	 | Lorem ipsum | Test | test@test.test |               | 4 Privet Drive, Little Whinging, Surrey |
+	 | Lorem ipsum |      | test@test.test | 111           | 4 Privet Drive, Little Whinging, Surrey |
 	 And i check logIn checkbox field 
 	 And click Submit
 	 Then the story is not sent
@@ -30,5 +30,6 @@ Scenario: Send the coronovirus story with invalid email
 	 When fill in the information on the bottom
 	 | Story         | Name | EmailAddress | ContactNumber | Location |
 	 | Another story | Name | email        | 111           | Location |
+	 And i check logIn checkbox field 
 	 And click Submit
 	 Then the story is not sent

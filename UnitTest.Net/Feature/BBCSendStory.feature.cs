@@ -134,9 +134,9 @@ this.ScenarioInitialize(scenarioInfo);
                             "Location"});
                 table1.AddRow(new string[] {
                             "Lorem ipsum",
-                            "Test",
-                            "test@test.test",
                             "",
+                            "test@test.test",
+                            "111",
                             "4 Privet Drive, Little Whinging, Surrey"});
 #line 13
   testRunner.When("fill in the information on the bottom", ((string)(null)), table1, "When ");
@@ -259,9 +259,12 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When("fill in the information on the bottom", ((string)(null)), table3, "When ");
 #line hidden
 #line 33
-  testRunner.And("click Submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("i check logIn checkbox field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
+  testRunner.And("click Submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 35
   testRunner.Then("the story is not sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

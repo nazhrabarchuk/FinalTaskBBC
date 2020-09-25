@@ -51,7 +51,7 @@ namespace UnitTest.Net.Steps
         {
             dynamic data = table.CreateDynamicInstance();
 
-            GetCoronavirusPage().LogInKeys((string)data.Story, (string)data.Name, (string)data.EmailAddress, (string)data.ContactNumber, (string)data.Location);
+            GetCoronavirusPage().LogInKeys((string)data.Story, (string)data.Name, (string)data.EmailAddress, (int)data.ContactNumber, (string)data.Location);
         }
 
         [When(@"i check logIn checkbox field")]
