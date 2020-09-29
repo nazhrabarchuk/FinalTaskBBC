@@ -64,6 +64,7 @@ namespace UnitTest.Net.Steps
         public void WhenClickSubmit()
         {
             GetCoronavirusPage().ClickSubmit();
+            GetBasePage().ImplicitWait();
         }
 
         [Then(@"the story is not sent")]

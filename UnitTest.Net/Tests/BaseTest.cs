@@ -7,7 +7,6 @@ namespace UnitTest.Net.tests
 {
     public class BaseTest
     {
-
         private const string BBC_URL = "https://www.bbc.com/";
 
         [SetUp]

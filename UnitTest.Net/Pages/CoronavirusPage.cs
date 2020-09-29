@@ -66,8 +66,7 @@ namespace UnitTest.Net.Pages
         {
             return ErrorMessage;
         }
-
-      
+     
         public void LogInKeys(string userStory, string userName, string userEmail, int userNumber, string userLocation)
         {
             UserStoryTexarea.SendKeys(userStory);
@@ -83,11 +82,7 @@ namespace UnitTest.Net.Pages
             UserConfirmServiceCheckbox.Click();
         }
 
-        public void ClickSubmit()
-        {
-            SubmitButton.Submit();
-            ImplicitWait();
-        }
+        public void ClickSubmit() => SubmitButton.Submit();      
 
         public bool IsErrorMessageExist() => ErrorMessage.Displayed;
 
