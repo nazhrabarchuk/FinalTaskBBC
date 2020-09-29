@@ -4,7 +4,7 @@ using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
 
 
-namespace UnitTest.Net.pages
+namespace FinalTaskBBC.pages
 {
     public class BasePage
     {

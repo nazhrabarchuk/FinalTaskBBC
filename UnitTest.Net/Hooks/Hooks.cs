@@ -1,7 +1,7 @@
 ﻿using TechTalk.SpecFlow;
-using UnitTest.Net.Pages;
+using FinalTaskBBC.Pages;
 
-namespace UnitTest.Net.Hooks
+namespace FinalTaskBBC.Hooks
 {
     [Binding]
     public sealed class Hooks

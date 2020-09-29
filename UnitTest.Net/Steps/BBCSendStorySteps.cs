@@ -3,9 +3,9 @@ using OpenQA.Selenium;
 using System;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
-using UnitTest.Net.tests;
+using FinalTaskBBC.tests;
 
-namespace UnitTest.Net.Steps
+namespace FinalTaskBBC.Steps
 {
     [Binding]
     public class BBCSendStorySteps : BaseTest

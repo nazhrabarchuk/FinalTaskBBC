@@ -1,9 +1,8 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
-namespace UnitTest.Net.pages
+namespace FinalTaskBBC.pages
 {
-   
     public class HomePage : BasePage
     {
         public HomePage(IWebDriver driver) : base(driver) { }

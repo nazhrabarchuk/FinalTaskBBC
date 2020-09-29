@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using System;
 
-namespace UnitTest.Net.Pages
+namespace FinalTaskBBC.Pages
 {
     public static class Driver
     {

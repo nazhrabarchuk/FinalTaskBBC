@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using UnitTest.Net.pages;
-using UnitTest.Net.Pages;
+using FinalTaskBBC.pages;
+using FinalTaskBBC.Pages;
 
-namespace UnitTest.Net.tests
+namespace FinalTaskBBC.tests
 {
     public class BaseTest
     {

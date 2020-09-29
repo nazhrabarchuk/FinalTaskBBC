@@ -2,9 +2,8 @@ using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System.Collections.Generic;
 
-namespace UnitTest.Net.pages
+namespace FinalTaskBBC.pages
 {
-
    public class NewsPage : BasePage
     {
         public NewsPage(IWebDriver driver) : base(driver) { }

@@ -1,11 +1,10 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using System;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
-using UnitTest.Net.tests;
+using FinalTaskBBC.tests;
 
-namespace UnitTest.Net.Steps
+namespace FinalTaskBBC.Steps
 {
     [Binding]
      public class BBCNewsSteps : BaseTest

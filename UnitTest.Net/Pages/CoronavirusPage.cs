@@ -1,9 +1,8 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
-using System;
-using UnitTest.Net.pages;
+using FinalTaskBBC.pages;
 
-namespace UnitTest.Net.Pages
+namespace FinalTaskBBC.Pages
 {
     public class CoronavirusPage : BasePage
     {
