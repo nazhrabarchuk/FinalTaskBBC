@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using System;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 using UnitTest.Net.tests;
@@ -51,7 +52,7 @@ namespace UnitTest.Net.Steps
         {
             dynamic data = table.CreateDynamicInstance();
 
-            GetCoronavirusPage().LogInKeys((string)data.Story, (string)data.Name, (string)data.EmailAddress, (int)data.ContactNumber, (string)data.Location);
+            GetCoronavirusPage().LogInKeys((string)data.Story, (string)data.Name, (string)data.EmailAddress, Convert.ToString(data.ContactNumber), (string)data.Location);
         }
 
         [When(@"i check logIn checkbox field")]

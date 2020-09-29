@@ -16,13 +16,7 @@ namespace UnitTest.Net.tests
             Driver.MaximizeWindow();
             Driver.Navigate(BBC_URL);
         }
-
-        [TearDown]
-        public void Close()
-        {
-            Driver.Quit();
-        }
-       
+      
         public IWebDriver GetDriver()
         {
             return Driver.Instance;

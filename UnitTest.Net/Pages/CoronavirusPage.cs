@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
+using System;
 using UnitTest.Net.pages;
 
 namespace UnitTest.Net.Pages
@@ -67,12 +68,12 @@ namespace UnitTest.Net.Pages
             return ErrorMessage;
         }
      
-        public void LogInKeys(string userStory, string userName, string userEmail, int userNumber, string userLocation)
+        public void LogInKeys(string userStory, string userName, string userEmail, string userNumber, string userLocation)
         {
             UserStoryTexarea.SendKeys(userStory);
             UserNameInput.SendKeys(userName);
             UserEmailInput.SendKeys(userEmail);
-            UserNumberInput.SendKeys(userNumber.ToString());
+            UserNumberInput.SendKeys(userNumber);
             UserLocationInput.SendKeys(userLocation);
         }
 
