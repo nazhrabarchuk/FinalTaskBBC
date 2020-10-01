@@ -14,7 +14,7 @@ namespace FinalTaskBBC.Pages
             {
                 if (_driver == null)
                 {
-                    throw new NullReferenceException("Driver is not started. Please call method 'Start'");
+                    Driver.Start();
                 }
                 return _driver;
             }

@@ -10,7 +10,7 @@ namespace FinalTaskBBC.Hooks
         [AfterScenario]
         public void AfterScenario()
         {
-            Driver.Close();
+            Driver.Quit();
         }
     }
 }
