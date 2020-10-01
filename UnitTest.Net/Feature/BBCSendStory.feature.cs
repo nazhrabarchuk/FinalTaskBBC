@@ -142,13 +142,13 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When("fill in the information on the bottom", ((string)(null)), table1, "When ");
 #line hidden
 #line 16
-  testRunner.And("i check logIn checkbox field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("i click checkbox input in the form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
   testRunner.And("click Submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
-  testRunner.Then("the story is not sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("the error message is exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -205,7 +205,7 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.And("click Submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
-  testRunner.Then("the story is not sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("the error message is exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -259,13 +259,13 @@ this.ScenarioInitialize(scenarioInfo);
   testRunner.When("fill in the information on the bottom", ((string)(null)), table3, "When ");
 #line hidden
 #line 33
-  testRunner.And("i check logIn checkbox field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+  testRunner.And("i click checkbox input in the form", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 34
   testRunner.And("click Submit", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 35
-  testRunner.Then("the story is not sent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("the error message is exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

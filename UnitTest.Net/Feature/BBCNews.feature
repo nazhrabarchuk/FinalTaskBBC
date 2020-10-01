@@ -18,4 +18,4 @@ Scenario: Search by copied headline article name
 	When I go to News page
 	And i put copied name to search input
 	And i click search
-	Then the name of the first article against a specified value
+	Then the title of the first article is equal to the searched value

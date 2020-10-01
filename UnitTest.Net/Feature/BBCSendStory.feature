@@ -13,9 +13,9 @@ Scenario: Send the coronovirus story
 	 When fill in the information on the bottom
 	 | Story       | Name | EmailAddress   | ContactNumber | Location                                |
 	 | Lorem ipsum |      | test@test.test | 111           | 4 Privet Drive, Little Whinging, Surrey |
-	 And i check logIn checkbox field 
+	 And i click checkbox input in the form
 	 And click Submit
-	 Then the story is not sent
+	 Then the error message is exist 
 
 @negative
 Scenario: Send the coronovirus story with empty fields
@@ -23,13 +23,13 @@ Scenario: Send the coronovirus story with empty fields
 	 | Story | Name | EmailAddress | ContactNumber | Location |
 	 |       |      |              |               |          |
 	 And click Submit
-	 Then the story is not sent
+	 Then the error message is exist 
 
 @negative
 Scenario: Send the coronovirus story with invalid email
 	 When fill in the information on the bottom
 	 | Story         | Name | EmailAddress | ContactNumber | Location |
 	 | Another story | Name | email        | 111           | Location |
-	 And i check logIn checkbox field 
+	 And i click checkbox input in the form 
 	 And click Submit
-	 Then the story is not sent
+	 Then the error message is exist 

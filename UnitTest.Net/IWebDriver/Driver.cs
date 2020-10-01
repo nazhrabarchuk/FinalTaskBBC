@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using System;
 
 namespace FinalTaskBBC.Pages
 {
@@ -14,7 +13,7 @@ namespace FinalTaskBBC.Pages
             {
                 if (_driver == null)
                 {
-                    Driver.Start();
+                    Start();
                 }
                 return _driver;
             }

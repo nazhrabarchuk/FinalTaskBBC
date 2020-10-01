@@ -9,35 +9,15 @@ namespace FinalTaskBBC.pages
         public NewsPage(IWebDriver driver) : base(driver) { }
 
         [FindsBy(How = How.XPath, Using = "//div[@data-entityid='container-top-stories#1']//div[contains(@class,'gs-u-display-inline-block@m')]//h3")]
-        private IWebElement HeadlineArticleH3 { get; set; }
+        public IWebElement HeadlineArticleH3 { get; private set; }
 
         [FindsBy(How = How.XPath, Using = "//div[@class='gel-wrap gs-u-pt+']//div[contains(@class,'nw-c-top-stories__secondary-item')]//h3")]
-        private IList<IWebElement> SecondaryArticleH3List { get; set; }
+        public IList<IWebElement> SecondaryArticleH3List { get; private set; }
 
         [FindsBy(How = How.XPath, Using = "//div[@data-entityid='container-top-stories#1']//div[contains(@class,'gs-u-display-inline-block@m')]//li[@class='nw-c-promo-meta']/a/span")]
-        private IWebElement CategoryLinkOfHeadlineArticleSpan { get; set; }
+        public IWebElement CategoryLinkOfHeadlineArticleSpan { get; private set; }
 
         [FindsBy(How = How.XPath, Using = "//main[@id='main-content']//ul[@role='list']/li[1]//a/span")]
-        private IWebElement FirstArticleSearchedSpan { get; set; }
-       
-        public IWebElement GetHeadlineArticleH3()
-        {
-            return HeadlineArticleH3;
-        }
-
-        public IList<IWebElement> GetSecondaryArticleH3List()
-        {
-            return SecondaryArticleH3List;
-        }
-
-        public IWebElement GetCategoryLinkOfHeadlineArticleSpan()
-        {
-            return CategoryLinkOfHeadlineArticleSpan;
-        }
-
-        public string GetFirstArticleSearchedSpanText()
-        {
-            return FirstArticleSearchedSpan.Text;
-        }
+        public IWebElement FirstArticleSearchedSpan { get; private set; }
     }
 }

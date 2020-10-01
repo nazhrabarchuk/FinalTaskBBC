@@ -20,15 +20,14 @@ namespace FinalTaskBBC.pages
             NewsPageButton.Click();
         }
 
-        public void SearchByKeyWord(string keyword)
+        public void PutKeywordToSearchInput(string keyword)
         {
-            SearchInput.SendKeys(keyword);
+            SearchInput.SendKeys(keyword);      
         }
 
-        public IWebElement GetSearchButton()
+        public void ClickSearchButton()
         {
-            return SearchButton;
+            SearchButton.Click();
         }
-
     }
 }

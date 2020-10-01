@@ -5,8 +5,7 @@ namespace FinalTaskBBC.Hooks
 {
     [Binding]
     public sealed class Hooks
-    {
-      
+    {   
         [AfterScenario]
         public void AfterScenario()
         {

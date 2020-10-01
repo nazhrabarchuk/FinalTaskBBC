@@ -22,25 +22,17 @@ namespace FinalTaskBBC.tests
             return Driver.Instance;
         }
 
-        public BasePage GetBasePage()
+        public void ClosePopupWindow()
         {
-            return new BasePage(Driver.Instance);
+            if (BasePage.SignInButton.Displayed)
+            {
+                BasePage.SignInButton.Click();
+            }
         }
 
-        public HomePage GetHomePage()
-        {
-            return new HomePage(Driver.Instance);
-        }
-
-        public NewsPage GetNewsPage()
-        {
-            return new NewsPage(Driver.Instance);
-        } 
-        
-        public CoronavirusPage GetCoronavirusPage()
-        {
-            return new CoronavirusPage(Driver.Instance);
-        }
-
+        public BasePage BasePage => new BasePage(Driver.Instance);
+        public HomePage HomePage => new HomePage(Driver.Instance);
+        public NewsPage NewsPage => new NewsPage(Driver.Instance);
+        public CoronavirusPage CoronavirusPage => new CoronavirusPage(Driver.Instance);  
     }
 }

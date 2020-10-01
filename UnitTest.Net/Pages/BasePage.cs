@@ -12,8 +12,7 @@ namespace FinalTaskBBC.pages
         private readonly static int timetoWait = 30000;
 
         [FindsBy(How = How.XPath, Using = "//button[@class='sign_in-exit']")]
-        private IWebElement SignInButton { get; set; }
-
+        public IWebElement SignInButton { get; private set; }
         public BasePage(IWebDriver driver)
         {
             this.driver = driver;
@@ -34,10 +33,5 @@ namespace FinalTaskBBC.pages
                 .ExecuteScript("return document.readyState")
                 .Equals("complete"));
         }
-
-        public IWebElement GetSignInButton()
-        {
-            return SignInButton;
-        }
-    }
+    } 
 }

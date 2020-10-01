@@ -9,7 +9,7 @@ namespace FinalTaskBBC.Pages
         public CoronavirusPage(IWebDriver driver) : base(driver) { }
 
         [FindsBy(How = How.XPath, Using = "//nav[@role='navigation' and @class='nw-c-nav__wide']//span[contains(text(),'Coronavirus')]/parent::a")]
-        private IWebElement CoronovirusButton { get; set; }
+        public IWebElement CoronovirusButton { get; private set; }
 
         [FindsBy(How = How.XPath, Using = "//nav[@role='navigation' and @class='nw-c-nav__wide-secondary']//span[contains(text(),'Your Coronavirus Stories')]/parent::a")]
         private IWebElement YouCoronovirusStoriesButton { get; set; }
@@ -47,28 +47,28 @@ namespace FinalTaskBBC.Pages
         [FindsBy(How = How.XPath, Using = "//div[@class='social-buttons-container']")]
         private IWebElement ConfirmNotification { get; set; }
 
-        public IWebElement GetCoronovirusButton()
+        public void ClickCoronovirusButton()
         {
-            return CoronovirusButton;
+             CoronovirusButton.Click();
         }
 
-        public IWebElement GeYouCoronovirusStoriesButton()
+        public void ClickYouCoronovirusStoriesButton()
         {
-            return YouCoronovirusStoriesButton;
+            YouCoronovirusStoriesButton.Click();
         }
 
-        public IWebElement GetHowToShareBBCNewsButton()
+        public void ClickHowToShareBBCNewsButton()
         {
-            return HowToShareBBCNewsButton;
+             HowToShareBBCNewsButton.Click();
         }
 
-        public IWebElement GetErrorMessage()
-        {
-            return ErrorMessage;
-        }
-     
-        public void LogInKeys(string userStory, string userName, string userEmail, string userNumber, string userLocation)
-        {
+        public void LogInKeys(
+            string userStory,
+            string userName,
+            string userEmail,
+            string userNumber,
+            string userLocation
+        ){
             UserStoryTexarea.SendKeys(userStory);
             UserNameInput.SendKeys(userName);
             UserEmailInput.SendKeys(userEmail);
@@ -83,9 +83,7 @@ namespace FinalTaskBBC.Pages
         }
 
         public void ClickSubmit() => SubmitButton.Submit();      
-
         public bool IsErrorMessageExist() => ErrorMessage.Displayed;
-
         public bool IsConfirmNotificationExist() => ConfirmNotification.Displayed;
     }
 }
