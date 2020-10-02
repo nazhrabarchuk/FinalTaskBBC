@@ -9,14 +9,15 @@ namespace FinalTaskBBC.Steps
     [Binding]
      public class BBCNewsSteps : BaseTest
     {
-        private const string EXPECTED_HEADLINE_ARTICLE_TEXT = "WHO warns of 'very serious situation' in Europe";
-        private const string EXPECTED_SEARCHED_FIRST_ARTICLE_TEXT = "World's End: World's End";
-        private readonly string[] SECONDARY_ARTICLE_TEXT = { 
-            "Greece moves migrants to new camp after fire",
-            "Navalny's aides say poison found on water bottle",
-            "Why fires in Siberia threaten us all",
-            "Protesters topple conquistador statue in Colombia",
-            "Police 'requested heat ray' for White House protest"
+        private const string EXPECTED_HEADLINE_ARTICLE_TEXT = "Trump and Melania test positive for coronavirus";
+        private const string EXPECTED_SEARCHED_FIRST_ARTICLE_TEXT = "US & Canada";
+        private readonly List<string> SECONDARY_ARTICLE_TEXT = new List<string> {
+            "Armenia 'ready' for Nagorno-Karabakh truce talks",
+            "EU warns Turkey of sanctions over 'provocations'",
+            "Lebanon seeks arrest of Beirut blast ship pair",
+            "Nasa to launch new $23m toilet to space station",
+            "Deaths at Saudi migrant detention centre - report"
+
         };
 
         [Given(@"the BBC Home page is open")]
@@ -30,6 +31,8 @@ namespace FinalTaskBBC.Steps
         {
             HomePage.ClickNewsPageButton();
             BasePage.WaitForPageLoadComplete();
+
+            ClosePopupWindow();
         }
 
         [When(@"i put copied name to search input")]
@@ -55,14 +58,16 @@ namespace FinalTaskBBC.Steps
         public void ThenTheSeconadyArticlesNameLoadedSuccesfully()
         {
             IList<IWebElement> elementList = NewsPage.SecondaryArticleH3List;
+            bool IsEquals = true;
 
-            for (int i = 0; i < elementList.Count; i++)
+            foreach(IWebElement elem in elementList)
             {
-                for (int j = 0; j < SECONDARY_ARTICLE_TEXT.Length; j++)
+                if (!(SECONDARY_ARTICLE_TEXT.Contains(elem.Text)))
                 {
-                    Assert.AreEqual(elementList[i].Text, SECONDARY_ARTICLE_TEXT[i]);
+                    IsEquals = false;
                 }
             }
+            Assert.IsTrue(IsEquals);
         }
        
         [Then(@"the title of the first article is equal to the searched value")]

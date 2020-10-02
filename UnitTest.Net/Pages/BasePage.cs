@@ -3,7 +3,6 @@ using System;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.PageObjects;
 
-
 namespace FinalTaskBBC.pages
 {
     public class BasePage
@@ -33,5 +32,5 @@ namespace FinalTaskBBC.pages
                 .ExecuteScript("return document.readyState")
                 .Equals("complete"));
         }
-    } 
+    }
 }
